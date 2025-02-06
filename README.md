@@ -166,3 +166,5 @@ Available endpoints:
 - `/multiply?a={number}&b={number}`
 
 - `/divide?a={number}&b={number}`
+
+- `/power?a={number}&b={number}`

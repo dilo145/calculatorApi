@@ -41,4 +41,18 @@ describe('Calculator API', () => {
             assert.equal(res.body.error, 'Division by zero');
         });
     });
+
+    describe('GET /power', () => {
+        it('should return a number raised to the power of another number', async () => {
+            const res = await request(app).get('/power').query({ a: 2, b: 3 });
+            assert.equal(res.status, 200);
+            assert.equal(res.body.result, 8);
+        });
+
+        it('should handle negative exponents', async () => {
+            const res = await request(app).get('/power').query({ a: 2, b: -1 });
+            assert.equal(res.status, 200);
+            assert.equal(res.body.result, 0.5);
+        });
+    });
 });
