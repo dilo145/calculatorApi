@@ -35,7 +35,7 @@ jobs:
       - name: Lint Dockerfile with Hadolint
         uses: hadolint/hadolint-action@v3.1.0
         with:
-          dockerfile: ./
+          dockerfile: ./Dockerfile
 
   build-and-publish:
     needs: test
