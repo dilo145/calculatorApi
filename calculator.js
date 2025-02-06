@@ -33,6 +33,12 @@ app.get('/divide', (req, res) => {
     }
 });
 
+app.get('/power', (req, res) => {
+    const { a, b } = req.query;
+    const result = Math.pow(Number(a), Number(b));
+    res.send({ result });
+});
+
 app.listen(port, () => {
     console.log(`Calculator API is running at http://localhost:${port}`);
 });
