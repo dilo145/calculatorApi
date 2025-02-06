@@ -32,6 +32,11 @@ jobs:
       - name: Run tests
         run: npm test
 
+      - name: Lint Dockerfile with Hadolint
+        uses: hadolint/hadolint-action@v3.1.0
+        with:
+          dockerfile: ./Dockerfile
+
   build-and-publish:
     needs: test
     runs-on: ubuntu-22.04
