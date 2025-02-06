@@ -1,0 +1,35 @@
+{
+  "name": "calculatorapi",
+  "version": "1.0.0",
+  "description": "Calculator Api",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "node calculator.js",
+    "test": "mocha tests/*.test.js --exit",
+    "lint": "eslint ."
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dilo145/calculatorApi.git"
+  },
+  "author": "dilo145",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dilo145/calculatorApi/issues"
+  },
+  "homepage": "https://github.com/dilo145/calculatorApi#readme",
+  "dependencies": {
+    "express": "^4.21.2",
+    "mocha": "^11.1.0",
+    "supertest": "^7.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.19.0",
+    "eslint": "^9.19.0",
+    "globals": "^15.14.0"
+  }
+}
